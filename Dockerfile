@@ -1,8 +1,10 @@
 FROM node:10-alpine
 
-RUN git clone 
+RUN apk update && apk add git
 
-WORKDIR /Docker_app/backend/
+RUN git clone https://github.com/marqueschristmann/Docker_app_Backend.git
+
+WORKDIR /Docker_app_Backend/
 
 #COPY package*.json ./
 
